@@ -43,3 +43,36 @@ def imageresize():
     cv2.imshow("Resized image", resized)
 
 
+def changeintensities(img):
+    img = img
+    height, width, channels = img.shape
+    for i in range(0, height):
+        for j in range(0, width):
+            #img[i, j] = img[i, j]-2
+            (b, g, r) = img[i, j]
+            img[i, j] = (b, g, 0)# Removed the red intensity of pixel
+    directory = r'C:\Users\Nagraj\PycharmProjects\ComputerVision01\Images'
+    os.chdir(directory)
+    cv2.imwrite('noredImage.jpg', img)
+
+def swapintensities(img):
+    img = img
+    height, width, channels = img.shape
+    for i in range(0, height):
+        for j in range(0, width):
+            #img[i, j] = img[i, j]-2
+            (b, g, r) = img[i, j]
+            img[i, j] = (r, b, g)#swapped the intensity of the pixel
+    directory = r'C:\Users\Nagraj\PycharmProjects\ComputerVision01\Images'
+    os.chdir(directory)
+    cv2.imwrite('swapedintensityimage.jpg', img)
+
+def HSIYCbCr(img):
+    img = img
+    height, width, channels = img.shape
+    for i in range(0, height):
+        for j in range(0, width):
+            (b, g, r) = img[i, j]
+
+
+
