@@ -1,4 +1,4 @@
-OpenCv Operations
+OpenCv Operations using Python
 
 1)Read and Display an Image using OpenCV/PIL. Decrease each pixel value by a factor of 2 and
 save the resultant image.
